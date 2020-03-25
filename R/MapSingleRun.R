@@ -119,9 +119,9 @@ map.single.run <-
       env.vp.ras <- raster(env.vp.fname)
       env.ID <- substr(Z.files[i.env], nchar(Z.files[i.env])-13+1, nchar(Z.files[i.env])-12)
       plot(final.occurrence.ras, main=paste0("Mean tolerance for environment ",env.ID), col=c("grey","black"),legend=F)
-      plot(env.z.ras, col=colours,add=T)
+      plot(env.z.ras, add=T) #col=colours, 
       plot(final.occurrence.ras, main=paste0("Variance in tolerance for environment ",env.ID), col=c("grey","black"),legend=F)
-      plot(env.vp.ras, col=colours,add=T)
+      plot(env.vp.ras, add=T) # col=colours,
       } # end for i.env
     } # end if n.env.vars.adapt > 0
   
